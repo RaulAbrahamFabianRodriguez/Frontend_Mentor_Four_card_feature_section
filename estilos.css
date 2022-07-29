@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--VeryDarkBlue);
+    background-color: var(--VeryLightGray);
+}
+.Contenedor_General{
+    margin: 90px 40px;
+    /* border: 1px solid black; */
+}
+header{
+    text-align: center;
+    margin-bottom: 80px;
+    /* border: 1px solid red; */
+}
+header h1{
+    font-weight: 200;
+    font-size: 24px;
+    animation: IzquierdaDerecha 1000ms;
+}
+header h2{
+    font-weight: 600;
+    margin-bottom: 20px;
+    animation: DerechaIzquierda 1000ms;
+}
+header p{
+    font-size: 14px;
+    color: var(--GrayishBlue);
+    animation: ArribaAbajo 1000ms;
+}
+.Contenedor_Tarjetas{
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 30px;
+    animation: AbajoArriba 1000ms;
+}
+.Tarjetas{
+    border-radius: 8px;
+    background-color: var(--VeryLightGray);
+    box-shadow: 3px 10px 10px var(--GrayishBlue);
+    margin-bottom: 25px;
+    min-width: 310px;
+    max-width: 600px;
+    height: 225px;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+.Tarjeta_1 .Linea{
+    background-color: var(--Cyan);
+    height: 4px;
+}
+.Tarjeta_2 .Linea{
+    background-color: var(--Red);
+    height: 4px;
+}
+.Tarjeta_3 .Linea{
+    background-color: var(--Orange);
+    height: 4px;
+}
+.Tarjeta_4 .Linea{
+    background-color: var(--Blue);
+    height: 4px;
+}
+.Contenedor{
+    margin: 30px 30px;
+}
+.Contenedor h3{
+    margin-bottom: 20px;
+}
+.Contenedor p{
+    color: var(--GrayishBlue);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.img{
+    text-align: right;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media only screen and (min-width: 1240px){
+    header{
+        width: 500px;
+        margin: 80px auto;
+        /* border: solid 1px black; */
+    }
+    .Contenedor_Tarjetas{
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 30px;
+        /* border: solid 1px black; */
+    }
+    .Tarjetas{
+        width: 355px;
+        height: 250px;
+    }
+}
+  /* Animaciones */
+@keyframes ArribaAbajo{
+    0%{transform: translateY(-500px);}
+    100%{transform: translateY(0px);}
+}
+@keyframes AbajoArriba{
+    0%{transform: translateY(500px);}
+    100%{transform: translateY(0px);}
+}
+@keyframes IzquierdaDerecha{
+    0%{transform: translateX(-500px);}
+    100%{transform: translateX(0px);}
+}
+@keyframes DerechaIzquierda{
+    0%{transform: translateX(500px);}
+    100%{transform: translateX(0px);}
+}
